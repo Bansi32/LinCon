@@ -42,17 +42,18 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 const authRoutes = require('./routes/authRoutes');
+const communityRoutes = require('./routes/communityRoutes');
 
 app.get('/', (req, res) => {
     res.render('landing'); 
 });
 
-app.get('/', isLoggedIn, (req, res) => {
+app.get('/home', isLoggedIn, (req, res) => {
     res.render('home');
 });
 
-
 app.use(authRoutes);
+app.use(communityRoutes);
 
 app.listen(PORT, () => {
   console.log(`The server is up and running at port ${PORT}`);

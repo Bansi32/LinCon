@@ -38,7 +38,7 @@ router.post(
     failureRedirect: "/login",
   }),
   (req, res) => {
-    res.redirect("/");
+    res.redirect("/home");
   }
 );
 

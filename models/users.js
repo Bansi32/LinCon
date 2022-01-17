@@ -36,7 +36,14 @@ const userSchema = new mongoose.Schema({
    },
   location: {
     type: String,
-  }
+  },
+
+  communities: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Community'
+    }
+  ]
 });
 
 userSchema.plugin(passportLocalMongoose);
