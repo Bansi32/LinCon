@@ -14,29 +14,12 @@ body {
   border-radius: 0px 0px 300px 0px;
 }
 
-.title {
-  position: absolute;
-  width: 236px;
-  height: 58px;
-  left: 235px;
-  top: 130px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: xx-large;
-  line-height: 42px;
-  color: black;
-  font-style: italic;
-  /* background: linear-gradient(to right, #ca8d64 0%, #b91e93 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-}
 .logo {
   position: absolute;
-  width: 100px;
-  height: 50px;
+  width: 120px;
+  height: 70px;
   left: 130px;
-  top: 145px;
+  top: 135px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -236,4 +219,14 @@ body {
   font-size: 26px;
   color: #000000;
   bottom: -110px;
+}
+.f {
+  position: absolute;
+  top: 250px;
+  left: 300px;
+}
+.content1 {
+  position: absolute;
+  top: 300px;
+  text-align: center;
 }
