@@ -12,7 +12,7 @@
 }
 
 .logo {
-  @apply h-28 absolute w-32;
+  @apply h-28 absolute w-28;
   left: 300px;
   top: 20px;
 }
