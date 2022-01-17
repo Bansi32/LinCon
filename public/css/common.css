@@ -3,6 +3,8 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Landing Page */
 .container {
   position: absolute;
   width: 100vw;
@@ -220,13 +222,5 @@ body {
   color: #000000;
   bottom: -110px;
 }
-.f {
-  position: absolute;
-  top: 250px;
-  left: 300px;
-}
-.content1 {
-  position: absolute;
-  top: 300px;
-  text-align: center;
-}
+
+/* Landing Page Ends */

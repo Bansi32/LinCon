@@ -45,7 +45,7 @@ const authRoutes = require('./routes/authRoutes');
 const communityRoutes = require('./routes/communityRoutes');
 
 app.get('/', (req, res) => {
-    res.render('landing'); 
+    res.render('createCommunity'); 
 });
 
 app.get('/home', isLoggedIn, (req, res) => {
