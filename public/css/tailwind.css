@@ -12,16 +12,14 @@
 }
 
 .logo {
-  @apply h-10 text-4xl absolute text-black not-italic w-10;
+  @apply h-28 absolute w-32;
   left: 300px;
-  font-family: Roboto;
-  font-weight: normal;
-  line-height: 57px;
+  top: 20px;
 }
 .h1 {
   @apply h-16 absolute not-italic w-40;
   left: 320px;
-  top: 70px;
+  top: 90px;
   font-family: Merriweather;
   font-size: xx-large;
   font-weight: bold;
@@ -33,7 +31,7 @@
   width: 700px;
   height: 545px;
   left: 20px;
-  top: 20px;
+  top: 30px;
 }
 
 .main_form {
