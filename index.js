@@ -43,9 +43,14 @@ passport.deserializeUser(User.deserializeUser());
 
 const authRoutes = require('./routes/authRoutes');
 
+app.get('/', (req, res) => {
+    res.render('landing'); 
+});
+
 app.get('/', isLoggedIn, (req, res) => {
     res.render('home');
 });
+
 
 app.use(authRoutes);
 
