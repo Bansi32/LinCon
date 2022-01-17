@@ -1,21 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    Signup Page
-    <form action="/register" method="POST">
-        <input type="text" name="name" placeholder="Name">
-        <input type="text" name="username" placeholder="Username">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="text" name="location" placeholder="Location">
-        <button type="submit">Register</button>
-        <a href="/login">Login</a>
-    </form>
-</body>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="reg.css" />
+      </head>
+      <body
+        class="h-screen bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-600"
+      >
+        <div class="reg_page">
+          <div class="logo">
+            <h1>Logo</h1>
+          </div>
+          <h1 class="h1">Sign Up</h1>
+          <div class="form1">
+            <form class="main_form1" action="/register" method="POST">
+              <div class="grp11">
+                <label class="label_name1" for="name">Name</label>
+                <input
+                  class="name1"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="grp12">
+                <label class="label_username1" for="name">Username</label>
+                <input
+                  class="username1"
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                />
+              </div>
+              <div class="grp13">
+                <label class="label_email1" for="name">Email</label>
+                <input
+                  class="email1"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="grp14">
+                <label class="label_password1" for="name">Password</label>
+                <input
+                  class="password1"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="grp15">
+                <label class="label_location1" for="name">Location</label>
+                <input
+                  class="location1"
+                  type="text"
+                  name="location"
+                  placeholder="Location"
+                />
+              </div>
+              <button class="btn1" type="submit">Register</button>
+              <a class="a" href="/login">LogIn</a>
+            </form>
+          </div>
+        </div>
+      </body>
+    </html>
+  </body>
 </html>
