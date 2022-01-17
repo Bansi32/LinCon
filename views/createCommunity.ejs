@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body class="h-screen bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-600">
+    <div class="community">
+      <div class="logo_main">
+        <img src="images/logo.png" alt="CSHH" />
+      </div>
+      <h1 class="h">New Community</h1>
+      <div class="form3">
+        <form class="main_form3" action="/create-community" method="POST">
+          <div class="grp24">
+            <label class="name3" for="name">Name</label>
+            <input
+              class="in_name"
+              type="text"
+              name="name"
+              placeholder="Community Name"
+            />
+          </div>
+          <div class="grp25">
+            <label class="location3" for="location">Location</label>
+            <input
+              class="in_loc"
+              type="text"
+              name="location"
+              placeholder="Location"
+            />
+          </div>
+          <div class="grp26">
+            <textarea
+              class="txt"
+              name="about"
+              id=""
+              cols="60"
+              rows="10"
+              placeholder="About community"
+            ></textarea>
+          </div>
+          <button class="btn3" type="submit">Create</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
