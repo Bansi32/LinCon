@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    Login Page
-    <form action="/login" method="POST">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <button type="submit">Login</button>
-        <a href="/register">Register</a>
-    </form>
-</body>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body class="h-screen bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-600">
+    <div class="login_page">
+      <div class="logo">
+        <img src="images/logo1.png" alt="CSHH" />
+      </div>
+      <h1 class="h1">Login</h1>
+      <div class="form">
+        <form class="main_form" action="/login" method="POST">
+          <div class="grp4">
+            <label class="label_email" for="username">Username</label>
+            <input
+              class="email"
+              type="text"
+              name="username"
+              placeholder="Username"
+            />
+          </div>
+          <div class="grp5">
+            <label class="label_password" for="password">Password</label>
+            <input
+              class="password"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+          </div>
+          <button class="btn" type="submit">Login</button>
+          <a class="a1" href="/register">Register</a>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

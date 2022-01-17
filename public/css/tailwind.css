@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.login_page {
+  @apply bg-white absolute;
+  width: 720px;
+  height: 600px;
+  left: 400px;
+  top: 76px;
+  box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.logo {
+  @apply h-28 absolute w-28;
+  left: 300px;
+  top: 20px;
+}
+.h1 {
+  @apply h-16 absolute not-italic w-40;
+  left: 320px;
+  top: 90px;
+  font-family: Merriweather;
+  font-size: xx-large;
+  font-weight: bold;
+  line-height: 62px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.53);
+}
+.form {
+  @apply absolute;
+  width: 700px;
+  height: 545px;
+  left: 20px;
+  top: 30px;
+}
+
+.main_form {
+  @apply border-black border-solid border-2 box-border absolute;
+  left: 10%;
+  right: 10%;
+  top: 23%;
+  bottom: 8%;
+  mix-blend-mode: multiply;
+  border-radius: 10px;
+}
+
+.grp4 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 50.12px;
+  top: 40px;
+}
+.label_email {
+  @apply h-6 text-lg leading-5 absolute text-black not-italic w-20;
+  left: 5px;
+  top: 10px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+.email {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 400px;
+  left: 5px;
+  top: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.grp5 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 50.12px;
+  top: 180px;
+}
+
+.label_password {
+  @apply h-6 text-lg leading-5 absolute text-black not-italic w-20;
+  left: 5px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+.password {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 400px;
+  left: 5px;
+  top: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.btn {
+  @apply h-10 text-xl leading-8 absolute not-italic w-24;
+  left: 150px;
+  top: 300px;
+  font-family: Mochiy Pop P One;
+  font-weight: normal;
+  border-radius: 30px;
+  box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(47, 230, 241, 0.84) -18.23deg,
+    #5bb7de 141.33deg,
+    rgba(47, 230, 241, 0.84) 341.77deg,
+    #5bb7de 501.33deg
+  );
+}
+
+.a1 {
+  @apply h-10 text-xl leading-8 absolute text-center text-black not-italic no-underline w-24;
+  left: 300px;
+  top: 301.5px;
+  font-family: Mochiy Pop P One;
+  font-weight: normal;
+  border-radius: 30px;
+  box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(47, 230, 241, 0.84) -18.23deg,
+    #5bb7de 141.33deg,
+    rgba(47, 230, 241, 0.84) 341.77deg,
+    #5bb7de 501.33deg
+  );
+}
+.reg_page {
+  @apply bg-white absolute;
+  width: 720px;
+  height: 600px;
+  left: 400px;
+  top: 76px;
+  box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.form1 {
+  @apply absolute;
+  width: 700px;
+  height: 545px;
+  left: 20px;
+  top: 20px;
+}
+
+.main_form1 {
+  @apply border-black border-solid border-2 box-border absolute text-center;
+  left: 10%;
+  right: 10%;
+  top: 23%;
+  bottom: 8%;
+  mix-blend-mode: multiply;
+  border-radius: 10px;
+}
+.btn1 {
+  @apply h-8 text-xl leading-8 absolute text-center not-italic w-24;
+  left: 170px;
+  top: 320px;
+  font-family: Mochiy Pop P One;
+  font-weight: normal;
+  border-radius: 30px;
+  box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(47, 230, 241, 0.84) -18.23deg,
+    #5bb7de 141.33deg,
+    rgba(47, 230, 241, 0.84) 341.77deg,
+    #5bb7de 501.33deg
+  );
+}
+.a {
+  @apply h-8 text-xl leading-8 absolute text-center text-black not-italic no-underline w-24;
+  left: 300px;
+  top: 320px;
+  font-family: Mochiy Pop P One;
+  font-weight: normal;
+  border-radius: 30px;
+  box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(47, 230, 241, 0.84) -18.23deg,
+    #5bb7de 141.33deg,
+    rgba(47, 230, 241, 0.84) 341.77deg,
+    #5bb7de 501.33deg
+  );
+}
+.grp11 {
+  @apply h-20 absolute;
+  width: 491.77px;
+}
+.label_name1 {
+  @apply h-6 text-lg absolute text-black not-italic w-24;
+  left: 60px;
+  top: 25px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+.name1 {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 300.77px;
+  left: 175px;
+  top: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.grp12 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 6px;
+  top: 80px;
+}
+.label_username1 {
+  @apply h-6 text-lg leading-5 absolute text-black not-italic w-24;
+  left: 60px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+.username1 {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 300.77px;
+  left: 170px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.grp13 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 6px;
+  top: 140px;
+}
+.label_email1 {
+  @apply h-6 text-lg absolute text-black not-italic w-24;
+  left: 60px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+.email1 {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 300.77px;
+  left: 170px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.grp14 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 6px;
+  top: 195px;
+}
+.label_password1 {
+  @apply h-6 text-lg leading-5 absolute text-black not-italic w-24;
+  left: 60px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+.password1 {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 300.77px;
+  left: 170px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.grp15 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 6px;
+  top: 255px;
+}
+.label_location1 {
+  @apply h-6 text-lg leading-5 absolute text-black not-italic w-24;
+  left: 60px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+.location1 {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 300.77px;
+  left: 170px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}

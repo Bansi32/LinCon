@@ -45,7 +45,7 @@ const authRoutes = require('./routes/authRoutes');
 
 app.get('/', isLoggedIn, (req, res) => {
     res.render('home');
-})
+});
 
 app.use(authRoutes);
 
