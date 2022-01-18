@@ -276,3 +276,121 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
+.community {
+  @apply bg-white absolute;
+  width: 720px;
+  height: 600px;
+  left: 400px;
+  top: 76px;
+  box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.logo_main {
+  @apply h-28 absolute w-28;
+  left: 300px;
+  top: 20px;
+}
+.h {
+  @apply h-16 absolute not-italic w-20;
+  left: 300px;
+  top: 90px;
+  font-family: Merriweather;
+  font-size: x-large;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.53);
+  white-space: nowrap;
+}
+.form3 {
+  @apply absolute;
+  width: 700px;
+  height: 545px;
+  left: 20px;
+  top: 30px;
+}
+
+.main_form3 {
+  @apply border-black border-solid border-2 box-border absolute;
+  left: 10%;
+  right: 10%;
+  top: 23%;
+  bottom: 8%;
+  mix-blend-mode: multiply;
+  border-radius: 10px;
+}
+
+.grp24 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 50.12px;
+  top: 20px;
+}
+.name3 {
+  @apply h-6 text-lg leading-5 absolute text-black not-italic w-20;
+  left: 5px;
+  top: 5px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+.in_name {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 400px;
+  left: 5px;
+  top: 35px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.grp25 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 50.12px;
+  top: 110px;
+}
+
+.location3 {
+  @apply h-6 text-lg leading-5 absolute text-black not-italic w-20;
+  left: 5px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+.in_loc {
+  @apply bg-white border-black border-solid border box-border h-8 absolute;
+  width: 400px;
+  left: 5px;
+  top: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.grp26 {
+  @apply h-20 absolute;
+  width: 485.77px;
+  left: 50.12px;
+  top: 170px;
+}
+.txt {
+  @apply bg-white border-black border-solid border box-border absolute;
+  width: 400px;
+  height: 100px;
+  left: 5px;
+  top: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.btn3 {
+  @apply h-10 text-xl leading-8 absolute not-italic w-24;
+  left: 230px;
+  top: 310px;
+  font-family: Mochiy Pop P One;
+  font-weight: normal;
+  border-radius: 30px;
+  box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(47, 230, 241, 0.84) -18.23deg,
+    #5bb7de 141.33deg,
+    rgba(47, 230, 241, 0.84) 341.77deg,
+    #5bb7de 501.33deg
+  );
+}

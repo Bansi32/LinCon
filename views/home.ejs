@@ -5,6 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/users.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="logo">
+          <img src="/images/logo.png" alt="logo" />
+        </div>
+        <div class="cfl">
+          <a class="link" href="/create-Community">Create-Commuity</a>
+          <a class="link" href="/allCommunities">Explore</a>
+          <a class="link" href="">Profile</a>
+          <a class="link" href="/">Logout</a>
+        </div>
+        <div class="home_back">
+          <img src="/images/home.png" alt="background img" />
+        </div>
+        <div class="create_community">
+          <h3>Top Communities</h3>
+        </div>
+        <div id="grp1">
+          <% for(let community of communities){%>
+          <div id="community">
+            <h2>
+              <%=community.name%>
+              <a href=""
+                ><img
+                  src="https://img.icons8.com/external-flatart-icons-solid-flatarticons/34/000000/external-chatting-chat-flatart-icons-solid-flatarticons.png"
+              /></a>
+            </h2>
+            <h4>
+              <img
+                src="https://img.icons8.com/material-outlined/15/000000/marker.png"
+              /><%=community.location%>
+            </h4>
+            <p>
+              <img src="https://img.icons8.com/ios/20/000000/arrow--v2.png" />
+              <%=community.about%>
+            </p>
+          </div>
+          <% } %>
+        </div>
+        <div class="bottom_img"></div>
+      </div>
+    </div>
+  </body>
 </html>

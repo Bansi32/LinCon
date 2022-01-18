@@ -38,14 +38,14 @@ router.post(
     failureRedirect: "/login",
   }),
   (req, res) => {
-    res.redirect("/");
+    res.redirect("/user/home");
   }
 );
 
 // Logout user
 router.get("/logout", (req, res) => {
   req.logout();
-  res.redirect("/login");
+  res.redirect("/");
 });
 
 module.exports = router;

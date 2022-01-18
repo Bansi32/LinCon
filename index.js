@@ -9,12 +9,13 @@ const LocalStrategy = require('passport-local');
 const session = require('express-session');
 const { isLoggedIn } = require('./middlewares/authMiddleware');
 const User = require('./models/users');
-
+const Community = require('./models/communities');
+const communityRoutes = require('./routes/communityRoutes');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const dbURI = process.env.DBURI;
 
-mongoose.connect(dbURI, {
+const db=mongoose.connect(dbURI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
@@ -47,12 +48,15 @@ app.get('/', (req, res) => {
     res.render('landing'); 
 });
 
-app.get('/', isLoggedIn, (req, res) => {
-    res.render('home');
+app.use(authRoutes);
+
+app.get('/user/home', isLoggedIn, async(req, res) => {
+    const communities = await Community.find({}).limit(3);
+    //const communities = db.Community.aggregate([{$project:{count:{$size:{"$ifNull":["$members",[]]}}}},{$sort:{"count":1}}]).limit(3);
+    res.render('home', {communities});
 });
 
-
-app.use(authRoutes);
+app.use(communityRoutes);
 
 app.listen(PORT, () => {
   console.log(`The server is up and running at port ${PORT}`);
