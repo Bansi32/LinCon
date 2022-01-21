@@ -4,9 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
+
   <body>
-    <h1>Profile</h1>
+    <div class="imgArea">
+      <img src="/images/logo.png" alt="logo" class="logo profileLogo" />
+      <ul>
+        <li><a href="">Edit Profile</a></li>
+        <li><a href="/user/home">Home</a></li>
+        <li><a href="/">Log Out</a></li>
+      </ul>
+    </div>
+    <div class="profileIcon">
+      <img src="/images/person.svg" alt="person" srcset="" />
+    </div>
+    <div class="profileInfo">
+      <div>
+        <h3><%=currentUser.name%></h3>
+        <h5>Bio</h5>
+      </div>
+      <div class="socialIcons">
+        <a href=""> <img src="/images/fb.svg" alt="fb" srcset="" /> </a>
+        <a href="">
+          <img src="/images/linkedin.svg" alt="linkedin" srcset="" />
+        </a>
+        <a href="">
+          <img src="/images/twitter.svg" alt="twitter" srcset="" />
+        </a>
+      </div>
+    </div>
+
+    <div class="profileMain">
+      <div class="profileCenter">
+        <div class="Map" id="map">
+          <h1><%=currentUser.location%></h1>
+        </div>
+        <div class="RegCommunitiy">
+          <h1>All communities registered by user</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+           mapboxgl.accessToken =
+        "pk.eyJ1IjoiYmFuc2kzMiIsImEiOiJja3lud295bDcyenlxMm5xcGxqY2wzZmdhIn0.LK64bwG40L2utXiEWZhWIQ";
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [<%-currentUser.geometry.coordinates%>],
+        zoom: 5,
+      });
+
+      var marker = new mapboxgl.Marker()
+        .setLngLat([<%-currentUser.geometry.coordinates%>])
+        .addTo(map);
+    </script>
   </body>
 </html>

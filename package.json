@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css":"npx tailwindcss build -i ./public/css/tailwind.css -o ./public/css/style.css",
+    "build:css": "npx tailwindcss build -i ./public/css/tailwind.css -o ./public/css/style.css",
     "dev": "nodemon index.js",
     "start": "node index.js"
   },

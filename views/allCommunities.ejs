@@ -4,13 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common.css" />
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <% for(let comm of communities){%>
-      <h1><%=comm.name%></h1>
-      <%}%>
+    <div class="comm_container">
+      <div class="logo1">
+        <img src="/images/logo.png" alt="" />
+      </div>
+      <div class="explore_img"><img src="/images/explore.png" alt="" /></div>
+      <div class="comm_head">
+        <a href="/user/home">Home</a>
+        <a href="/user/home/profile">Profile</a>
+        <a href="/">Logout</a>
+      </div>
+      <div class="all">
+        <h1>All Communities</h1>
+      </div>
+      <div id="all_comm">
+        <%for(let community of communities){%>
+        <div id="rect1">
+          <h2>
+            <%=community.name%>
+            <a href=""
+              ><img
+                src="https://img.icons8.com/color/34/000000/filled-chat.png"
+            /></a>
+          </h2>
+          <h4>
+            <img
+              src="https://img.icons8.com/color/15/000000/marker--v2.png"
+            /><%=community.location%>
+          </h4>
+          <p>
+            <img src="https://img.icons8.com/color/20/000000/about.png" />
+            <%=community.about%>
+          </p>
+        </div>
+        <%}%>
+      </div>
     </div>
   </body>
 </html>

@@ -3,9 +3,16 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #729fdb);
+  border-radius: 6px;
+}
 .container {
   position: absolute;
-  width: 100vw;
+  width: 98.9vw;
   height: 600px;
   left: calc(50% - width / 2);
   top: calc(50% - 654px / 2 - 153px);
@@ -16,16 +23,10 @@ body {
 
 .logo {
   position: absolute;
-  width: 120px;
-  height: 70px;
+  width: 150px;
+  height: 80px;
   left: 130px;
   top: 135px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 42px;
-  color: #000000;
 }
 
 .head_menu {
@@ -74,7 +75,7 @@ body {
   font-size: 45px;
   line-height: 57px;
   letter-spacing: 0.04em;
-  color: #36d2dc;
+  color: #5d5fef;
 
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.53);
 }
@@ -104,13 +105,7 @@ body {
   height: 55.33px;
   left: 280px;
   top: 250px;
-  background: conic-gradient(
-    from 180deg at 50% 50%,
-    rgba(47, 230, 241, 0.84) -18.23deg,
-    #5bb7de 141.33deg,
-    rgba(47, 230, 241, 0.84) 341.77deg,
-    #5bb7de 501.33deg
-  );
+  background: #5d5fef;
   border-radius: 30px;
 }
 .btn a {
@@ -229,4 +224,204 @@ body {
   position: absolute;
   top: 300px;
   text-align: center;
+}
+.logo1 {
+  position: absolute;
+  left: 150px;
+  top: 10px;
+}
+.logo1 img {
+  width: 180px;
+}
+.comm_head {
+  position: absolute;
+  left: 1024px;
+  top: 40px;
+}
+.comm_head a {
+  text-decoration: none;
+  padding: 1px 20px;
+  font-size: 25px;
+  color: #000000;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+}
+.comm_head a:hover {
+  cursor: pointer;
+  color: #729fdb;
+}
+.explore_img {
+  position: absolute;
+  left: 600px;
+}
+.explore_img img {
+  width: 250px;
+}
+.all {
+  position: absolute;
+  width: 220px;
+  height: 35px;
+  left: 630px;
+  top: 150px;
+}
+.all h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  color: #729fdb;
+}
+#all_comm {
+  position: absolute;
+  width: 1160px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  overflow: auto;
+  left: 190px;
+  top: 230px;
+  background: rgba(196, 196, 196, 0.4);
+}
+#all_comm #rect1 {
+  height: max-content;
+  width: 20rem;
+  margin: 40px 28px;
+  border: 0.1rem #c4c4c4 solid;
+  border-radius: 1.5rem;
+  background: rgba(167, 149, 149, 0.27);
+}
+#rect1 h2 {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1px 1px;
+}
+#rect1 h4 {
+  text-transform: capitalize;
+  padding-bottom: 5px;
+}
+/* Profie css */
+/*Profile Page CSS*/
+
+.imgArea {
+  position: absolute;
+  width: 1530px;
+  height: 330px;
+  left: 0px;
+  top: -78.62px;
+  filter: drop-shadow(1px 5px 4px rgba(0, 0, 0, 0.3));
+  border-radius: 15px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(47, 231, 241, 0.815),
+      rgba(91, 183, 222, 0.2196)
+    ),
+    url("https://thumbs.dreamstime.com/b/illustration-design-garden-background-garden-background-vector-152074056.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.imgArea ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  position: absolute;
+  left: 950px;
+  top: 115px;
+}
+
+.imgArea ul li {
+  list-style: none;
+  margin: 0 2rem 0 2rem;
+  font-size: large;
+  font-weight: bold;
+}
+
+.imgArea ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.imgArea .profileLogo {
+  top: 100px;
+  left: 80px;
+}
+
+.profileIcon {
+  position: relative;
+  top: 175px;
+  left: 148px;
+  background: rgba(236, 240, 241, 0.884);
+  border: 11px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 6px 5px 1px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  border-radius: 50%;
+  padding: 1.5rem;
+}
+
+.profileIcon img {
+  width: 90px;
+  height: 80px;
+  left: calc(50% - 159.7px / 2 - 474.54px);
+}
+
+.profileInfo {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  left: 350px;
+  top: 100px;
+}
+/* .profileInfo h5 {
+} */
+.profileInfo h3 {
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 43px;
+  color: #000000;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.socialIcons {
+  display: flex;
+  flex-direction: row;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+.socialIcons a img {
+  height: 22px;
+  width: 22px;
+  margin: 0 0.5rem;
+}
+
+.profileMain {
+  position: relative;
+  background: rgba(236, 240, 241, 0.8);
+  top: 100px;
+  margin: 10px 30px;
+  padding: 2rem 3rem;
+}
+
+.profileCenter {
+  display: flex;
+}
+
+.profileCenter .Map {
+  background-color: white;
+  height: 255px;
+  width: 300px;
+  padding: 0.5rem;
+  margin-right: 2rem;
+}
+
+.profileCenter .RegCommunitiy {
+  background-color: white;
+  padding: 2rem;
+  width: 100%;
 }

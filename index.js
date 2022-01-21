@@ -14,6 +14,10 @@ const communityRoutes = require('./routes/communityRoutes');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const dbURI = process.env.DBURI;
+const mapbGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
+const mapBoxToken = "pk.eyJ1IjoiYmFuc2kzMiIsImEiOiJja3lud295bDcyenlxMm5xcGxqY2wzZmdhIn0.LK64bwG40L2utXiEWZhWIQ";
+const map=mapbGeocoding({accessToken:mapBoxToken});
+
 
 const db=mongoose.connect(dbURI, {
         useNewUrlParser: true,
@@ -49,11 +53,28 @@ app.get('/', (req, res) => {
 });
 
 app.use(authRoutes);
-
-app.get('/user/home', isLoggedIn, async(req, res) => {
-    const communities = await Community.find({}).limit(3);
-    //const communities = db.Community.aggregate([{$project:{count:{$size:{"$ifNull":["$members",[]]}}}},{$sort:{"count":1}}]).limit(3);
+app.use(function (req, res, next) {
+    res.locals.currentUser = req.user;
+    next();
+});
+app.get('/user/home', isLoggedIn, async (req, res) => {
+    const geoData=await map.forwardGeocode({
+        query: req.currentUser.location,
+        limit:1
+    }).send();
+    const user=await User.findByIdAndUpdate(req.currentUser._id, {...req.body.currentUser});
+    user.geometry = geoData.body.features[0].geometry;
+    console.log(user);
+    await user.save();
+    const communities = await Community.find({}).limit(5);
+    //const communities = db.Community.aggregate([{$project:{count:{$size:{"$ifNull":["$members",[]]}}}},{$sort:{"count":-1}}]).limit(3);
     res.render('home', {communities});
+});
+
+app.get('/user/home/profile', isLoggedIn, async (req, res) => {
+    const user = await User.findById(req.currentUser._id);
+    console.log(user);
+    res.render('profile',{user}); 
 });
 
 app.use(communityRoutes);
