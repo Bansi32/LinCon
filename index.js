@@ -9,12 +9,17 @@ const LocalStrategy = require('passport-local');
 const session = require('express-session');
 const { isLoggedIn } = require('./middlewares/authMiddleware');
 const User = require('./models/users');
-
+const Community = require('./models/communities');
+const communityRoutes = require('./routes/communityRoutes');
 const app = express();
 const PORT = process.env.PORT || 4000;
 const dbURI = process.env.DBURI;
+const mapbGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
+const mapBoxToken = process.env.MAPID;
+const map=mapbGeocoding({accessToken:mapBoxToken});
 
-mongoose.connect(dbURI, {
+
+const db=mongoose.connect(dbURI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
@@ -42,17 +47,36 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 const authRoutes = require('./routes/authRoutes');
-const communityRoutes = require('./routes/communityRoutes');
 
 app.get('/', (req, res) => {
-    res.render('createCommunity'); 
-});
-
-app.get('/home', isLoggedIn, (req, res) => {
-    res.render('home');
+    res.render('landing'); 
 });
 
 app.use(authRoutes);
+app.use(function (req, res, next) {
+    res.locals.currentUser = req.user;
+    next();
+});
+app.get('/user/home', isLoggedIn, async (req, res) => {
+    const geoData=await map.forwardGeocode({
+        query: req.currentUser.location,
+        limit:1
+    }).send();
+    const user=await User.findByIdAndUpdate(req.currentUser._id, {...req.body.currentUser});
+    user.geometry = geoData.body.features[0].geometry;
+    console.log(user);
+    await user.save();
+    const communities = await Community.find({}).limit(5);
+    //const communities = db.Community.aggregate([{$project:{count:{$size:{"$ifNull":["$members",[]]}}}},{$sort:{"count":-1}}]).limit(3);
+    res.render('home', {communities});
+});
+
+app.get('/user/home/profile', isLoggedIn, async (req, res) => {
+    const user = await User.findById(req.currentUser._id);
+    console.log(user);
+    res.render('profile',{user}); 
+});
+
 app.use(communityRoutes);
 
 app.listen(PORT, () => {
