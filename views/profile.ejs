@@ -56,18 +56,17 @@
       </div>
     </div>
     <script>
-           mapboxgl.accessToken =
-        "pk.eyJ1IjoiYmFuc2kzMiIsImEiOiJja3lud295bDcyenlxMm5xcGxqY2wzZmdhIn0.LK64bwG40L2utXiEWZhWIQ";
-      const map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [<%-currentUser.geometry.coordinates%>],
-        zoom: 5,
-      });
+      mapboxgl.accessToken ="pk.eyJ1IjoiYmFuc2kzMiIsImEiOiJja3lud295bDcyenlxMm5xcGxqY2wzZmdhIn0.LK64bwG40L2utXiEWZhWIQ";
+            const map = new mapboxgl.Map({
+              container: "map",
+              style: "mapbox://styles/mapbox/streets-v11",
+              center: [<%-currentUser.geometry.coordinates%>],
+              zoom: 5,
+            });
 
-      var marker = new mapboxgl.Marker()
-        .setLngLat([<%-currentUser.geometry.coordinates%>])
-        .addTo(map);
+            var marker = new mapboxgl.Marker()
+              .setLngLat([<%-currentUser.geometry.coordinates%>])
+              .addTo(map);
     </script>
   </body>
 </html>

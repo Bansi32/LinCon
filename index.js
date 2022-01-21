@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const dbURI = process.env.DBURI;
 const mapbGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
-const mapBoxToken = "pk.eyJ1IjoiYmFuc2kzMiIsImEiOiJja3lud295bDcyenlxMm5xcGxqY2wzZmdhIn0.LK64bwG40L2utXiEWZhWIQ";
+const mapBoxToken = process.env.MAPID;
 const map=mapbGeocoding({accessToken:mapBoxToken});
 
 
