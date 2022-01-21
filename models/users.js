@@ -24,6 +24,7 @@ const userSchema = new mongoose.Schema({
     default: "/images/profilePic.jpeg",
   },
   location: {
+
     type: String
   },
   geometry: {
@@ -35,6 +36,17 @@ const userSchema = new mongoose.Schema({
              type: [Number]
          }   
     }
+
+    type: String,
+  },
+
+  communities: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Community'
+    }
+  ]
+
 });
 
 userSchema.plugin(passportLocalMongoose);

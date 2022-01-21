@@ -916,6 +916,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 10px;
 }
 
+
+
 .community {
   position: absolute;
   --tw-bg-opacity: 1;
@@ -948,6 +950,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.53);
   white-space: nowrap;
+
   color: #5d5fef;
 }
 
@@ -1091,5 +1094,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: normal;
   border-radius: 30px;
   box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.25);
+
   background: #5d5fef;
+
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    rgba(47, 230, 241, 0.84) -18.23deg,
+    #5bb7de 141.33deg,
+    rgba(47, 230, 241, 0.84) 341.77deg,
+    #5bb7de 501.33deg
+  );
 }

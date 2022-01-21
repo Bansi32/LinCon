@@ -3,6 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -10,6 +11,10 @@ body {
   background: linear-gradient(transparent, #729fdb);
   border-radius: 6px;
 }
+
+
+/* Landing Page */
+
 .container {
   position: absolute;
   width: 98.9vw;
@@ -214,7 +219,7 @@ body {
   font-size: 26px;
   color: #000000;
   bottom: -110px;
-}
+
 .f {
   position: absolute;
   top: 250px;
@@ -425,3 +430,4 @@ body {
   padding: 2rem;
   width: 100%;
 }
+

@@ -14,12 +14,21 @@ router.post('/create-community', isLoggedIn, async (req, res) => {
     try {
         const community = {
             name: req.body.name,
+
             location: req.body.location,
             about: req.body.about
         };
 
         const newCommunity = await Community.create(community);
         res.redirect("/user/home");
+
+            about: req.body.about,
+            location: req.body.location
+        };
+
+        const newCommunity = await Community.create(community);
+        res.redirect("/home");
+
     }
 
     catch(e) {
@@ -28,10 +37,12 @@ router.post('/create-community', isLoggedIn, async (req, res) => {
     }
 })  
 
+
 //get all communities listed
 router.get('/allCommunities', isLoggedIn, async (req, res) => {
     const communities = await Community.find({});
     res.render('allCommunities', { communities });
 });
+
 
 module.exports = router;
